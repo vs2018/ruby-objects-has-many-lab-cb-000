@@ -3,11 +3,13 @@ class Artist
   def initialize(name)
     @name = name
     @songs = []
+    @@total = []
   end
   
   def add_song(song)
     song.artist = self
     @songs << song
+    @@total << song
   end
   
   def add_song_by_name(song_name)
