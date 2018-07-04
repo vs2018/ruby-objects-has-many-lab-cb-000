@@ -14,4 +14,8 @@ class Artist
     song = Song.new(song_name)
     add_song(song)
   end
+  
+  def self.song_count
+    @songs.size
+  end
 end
