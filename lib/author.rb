@@ -8,18 +8,18 @@ class Author
     @posts = []
   end
   
-  def add_post(song)
-    post.artist = self
-    @songs << song
+  def add_post(post)
+    post.author = self
+    @posts << post
     @@total += 1
   end
   
-  def add_song_by_name(song_name)
-    song = Song.new(song_name)
-    add_song(song)
+  def add_post_by_name(post_name)
+    post = Post.new(post_name)
+    add_post(post)
   end
   
-  def self.song_count
+  def self.post_count
     @@total
   end
 end
